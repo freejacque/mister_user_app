@@ -1,4 +1,10 @@
 class User < Sequel::Model
+  plugin :secure_password
+
+  def validate
+    super
+  end
+
 
   def age
     birth_date = Time.at(dob)
