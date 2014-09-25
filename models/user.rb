@@ -5,7 +5,6 @@ class User < Sequel::Model
     super
   end
 
-
   def age
     birth_date = Time.at(dob)
     return (birth_date.year - Time.now.year).abs
